@@ -37,8 +37,7 @@ public class Product {
         // berarti checkLimitofBuying() harus return false/true 
     }
 */    
-
-    
+ 
     
 //    
     public void countSalesRanking() {
