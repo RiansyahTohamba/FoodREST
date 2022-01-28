@@ -5,6 +5,9 @@ public class Order {
     enum ORDER_STATUS {
         NEW, PROCESSING, SHIPPING, DELIVERED, CANCELED
     }
-    // 
 
+    public Bill createBillingInformation() {
+    	return null;
+    }
+    
 }

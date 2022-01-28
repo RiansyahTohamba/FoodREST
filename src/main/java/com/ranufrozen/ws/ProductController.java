@@ -13,9 +13,12 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @RequestMapping("api/v1/products")
-@AllArgsConstructor
 public class ProductController {
 	private final ProductService proserv;
+	
+	public ProductController() {
+		this.proserv = new ProductService();
+	}
 	
 	@GetMapping
 	public List<Product> fetchAllProducts(){

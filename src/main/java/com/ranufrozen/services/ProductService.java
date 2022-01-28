@@ -4,21 +4,21 @@ import org.springframework.stereotype.Service;
 import com.ranufrozen.models.Product;
 import com.ranufrozen.models.ProductRepository;
 
-import lombok.AllArgsConstructor;
-
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import com.ranufrozen.models.Product;
-@AllArgsConstructor
-// kenapa AllArgsConstructor belum bisa recover error final prodRepo dari eclipse?
+
+// kenapa @AllArgsConstructor belum bisa recover error final prodRepo dari eclipse?
 // eclipse belum menyesuaikan diri
 @Service
-public class ProductService {
-	private ConcurrentMap<Integer,Product> Product;
-	private final ProductRepository prodRepo;
-	
+public class ProductService {	
+	private ProductRepository prodRepo;
+
+	public ProductService() {
+						
+	}
 
 	public List<Product> getAllProducts() {
 		// TODO Auto-generated method stub
@@ -26,6 +26,7 @@ public class ProductService {
 	}
 
 	public static void initFake() {
+		ConcurrentMap<Integer,Product> Product;
 		// TODO Auto-generated method stub
 //       new ConcurrentHashMap<>();
 //      key = new AtomicInteger();
