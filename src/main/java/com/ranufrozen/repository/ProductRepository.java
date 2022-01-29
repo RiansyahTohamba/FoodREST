@@ -1,6 +1,7 @@
-package com.ranufrozen.models;
+package com.ranufrozen.repository;
 
 import java.util.Optional;
+import com.ranufrozen.models.Product;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
