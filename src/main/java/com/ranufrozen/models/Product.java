@@ -4,13 +4,19 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+// apakah mongo perlu javax persistence?
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Document
 public class Product {
 	@Id
-    private String price;
+    
+    private long price;
     private String photoPath;
     private String name;
     private int stock;
@@ -18,7 +24,7 @@ public class Product {
     
     public Product() {}
     
-    public Product(String price, String photoPath, String name, int stock, String desc) {
+    public Product(long price, String photoPath, String name, int stock, String desc) {
         this.price = price;
         this.photoPath = photoPath;
         this.name = name;
